@@ -1,3 +1,5 @@
+// ====>>>> exercício 1 <<<<====
+
 // let nome = ""
 // let idade =
 
@@ -19,7 +21,7 @@
 
 
 
-// //2-
+// ====>>>> exercício 2 <<<<====
 
 // let roupaAzul = prompt("Você usou roupa azul hoje ?")
 // let copoDagua = prompt("você bebeu agua hoje ?")
@@ -37,23 +39,24 @@
 // console.log("você dormiu hoje ?", sonecar)
 
 
-// -3 
+// ====>>>>> exercício 3 <<<<====
 
 // let a = 10
 // let b = 25
 
-// let c = 10
+// let c = a
 
 // a = b
 // b = c 
  
 
-// console.log(a,b)
+// console.log("O novo valor de a é", a)
+// console.log("O novo valor de b é", b)
 
 
+// ======>>>>DESAFIO <<<<====
 
-//DESAFIO
-
+// foi usado o numer () para converter a string coletada, para numero onde foi possivel realizar as operações lógicas
 let primeiroNumero = Number (prompt(" Digite um Número"))
 let segundoNumero = Number  (prompt("Digite outro Número"))
 
