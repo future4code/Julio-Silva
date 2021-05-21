@@ -23,20 +23,20 @@
 
 // ====>>>> exercício 2 <<<<====
 
-// let roupaAzul = prompt("Você usou roupa azul hoje ?")
-// let copoDagua = prompt("você bebeu agua hoje ?")
-// let soneca = prompt("você dormiu hoje ?")
+ let roupaAzul = prompt("Você usou roupa azul hoje ?")
+ let copoDagua = prompt("você bebeu agua hoje ?")
+ let soneca = prompt("você dormiu hoje ?")
 
-// // incluso a letra R referente a respostas
-// let roupaAzulr = roupaAzul
-// let copoDaguar = copoDagua
-// let sonecar = soneca
+// incluso a letra R referente a respostas
+ let roupaAzulr = roupaAzul
+ let copoDaguar = copoDagua
+ let sonecar = soneca
 
 
 
-// console.log("Você usou roupa azul hoje ?", roupaAzulr)
-// console.log("você bebeu agua hoje ?", copoDaguar)
-// console.log("você dormiu hoje ?", sonecar)
+ console.log("Você usou roupa azul hoje ?", roupaAzulr)
+ console.log("você bebeu agua hoje ?", copoDaguar)
+ console.log("você dormiu hoje ?", sonecar)
 
 
 // ====>>>>> exercício 3 <<<<====
@@ -57,11 +57,11 @@
 // ======>>>>DESAFIO <<<<====
 
 // foi usado o numer () para converter a string coletada, para numero onde foi possivel realizar as operações lógicas
-let primeiroNumero = Number (prompt(" Digite um Número"))
-let segundoNumero = Number  (prompt("Digite outro Número"))
+//let primeiroNumero = Number (prompt(" Digite um Número"))
+//let segundoNumero = Number  (prompt("Digite outro Número"))
 
-let soma = primeiroNumero + segundoNumero
-let mult = primeiroNumero * segundoNumero
+//let soma = primeiroNumero + segundoNumero
+//let mult = primeiroNumero * segundoNumero
 
-console.log("A soma dos dois é =", soma)
-console.log("A multiplicação dos números é =", mult)
+//console.log("A soma dos dois é =", soma)
+//console.log("A multiplicação dos números é =", mult)
