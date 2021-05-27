@@ -60,7 +60,7 @@ function imprimeInformacoesUsuario() {
   
 
 
-  console.log("Meu nome é",nome,"tenho",idade,"anos","e meu e-mail é",email)
+  console.log("Meu nome é "+ nome + ", tenho " + idade + " anos," + " e o meu email é " + email +".")
 
 }
 
@@ -129,6 +129,23 @@ function checaRenovacaoRG() {
    let anoNascimento = Number(prompt("Digite o ano de seu nasimento!"))
    let anoEmissaoRg = Number(prompt("Digite o ano de emissão da sua identidade!"))
 
+   const idade = anoAtual - anoNascimento
+   const venciRg = anoAtual - anoEmissaoRg
+
+   if (idade <= 20 && venciRg === 5){
+     console.log(true)
+   }else {
+     console.log(false)
+   }if (idade >= 20 || idade <= 50 && venciRg === 10){
+     console.log(true)
+   }else{
+     console.log(false)
+   }if ( idade >= 50 && venciRg === 15){
+     console.log(true)
+   }else{
+     console.log(false)
+   }
+
   
 }
 
@@ -148,3 +165,5 @@ function checaValidadeInscricaoLabenu() {
     console.log(true)
   }
 }
+
+
