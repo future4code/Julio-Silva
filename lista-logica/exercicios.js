@@ -115,55 +115,54 @@ function checaIgualdadeDesconsiderandoCase() {
    let opcao1 = prompt("Digite uma palavra!")
    let opcao2 = prompt("Digite outra palavra!")
 
-   if (opcao1.toUpperCase() === opcao2.toUpperCase()){
-     console.log(true)
-   }else{
-     console.log(false)
-   }
+   
+     console.log(opcao1.toUpperCase() === opcao2.toUpperCase())   
+     console.log(opcao1.toUpperCase() === opcao2.toUpperCase())
+   
 
 }
 
 // Exercício 10
 function checaRenovacaoRG() {
    let anoAtual = Number(prompt("Digite o ano atual!"))
-   let anoNascimento = Number(prompt("Digite o ano de seu nasimento!"))
+   let anoNascimento = Number(prompt("Digite o ano de seu nascimento!"))
    let anoEmissaoRg = Number(prompt("Digite o ano de emissão da sua identidade!"))
 
-   const idade = anoAtual - anoNascimento
-   const venciRg = anoAtual - anoEmissaoRg
+   let idade = anoAtual - anoNascimento
+   let venciRg = anoAtual - anoEmissaoRg
 
-   if (idade <= 20 && venciRg === 5){
-     console.log(true)
-   }else {
-     console.log(false)
-   }if (idade >= 20 || idade <= 50 && venciRg === 10){
-     console.log(true)
-   }else{
-     console.log(false)
-   }if ( idade >= 50 && venciRg === 15){
-     console.log(true)
-   }else{
-     console.log(false)
-   }
-
+   console.log(idade <=20  && venciRg >= 5)
+   console.log(idade >= 20  || idade <= 50 && venciRg >= 10)
+   console.log( idade > 50 && venciRg >= 15)
+  
   
 }
 
 // Exercício 11
 function checaAnoBissexto() {
-  // escreva seu código aqui
+  const anoAtual = Number(prompt("Digite em que ano nós estamos !"))
+  const anos = (anoAtual % 400 === 0) || (anoAtual % 4 == 0 && anoAtual % 100 != 0)
+  console.log(anos)
+
+
+
 }
 
 // Exercício 12
 function checaValidadeInscricaoLabenu() {
   
   let idade = prompt("Você tem mais de 18 anos ?")
-  let esolaridade = prompt("você possui ensino médio completo ?")
+  let escolaridade = prompt("você possui ensino médio completo ?")
   let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horarios do curso ?") 
    
-  if (idade >= true && escolaridade >= true && disponibilidade >= true ){
-    console.log(true)
-  }
+  console.log("tem mais de 18?:", idade)
+  console.log("tem ensino médio?:", escolaridade)
+  console.log("tem disponibilidade de horários?:", disponibilidade)
+  console.log(idade == "sim"  && escolaridade == "sim" && disponibilidade == "sim" )
+  
 }
+
+
+
 
 
