@@ -116,16 +116,15 @@ function checaIgualdadeDesconsiderandoCase() {
 
 // Exercício 10
 function checaRenovacaoRG() {
-   let anoAtual = Number(prompt("Digite o ano atual!"))
-   let anoNascimento = Number(prompt("Digite o ano de seu nascimento!"))
-   let anoEmissaoRg = Number(prompt("Digite o ano de emissão da sua identidade!"))
-
+   let anoAtual = prompt("Digite o ano atual!")
+   let anoNascimento = prompt("Digite o ano de seu nascimento!")
+   let anoEmissaoRg = prompt("Digite o ano de emissão da sua identidade!")
+   
    let idade = anoAtual - anoNascimento
    let venciRg = anoAtual - anoEmissaoRg
 
-   console.log(idade <=20  && venciRg >= 5)
-   console.log(idade >= 20  || idade <= 50 && venciRg >= 10)
-   console.log( idade > 50 && venciRg >= 15)
+   console.log ((idade<=20 && venciRg >= 5) || (idade>=20 && idade<=50 && venciRg >= 10) || (idade>50 && venciRg >= 15))
+   
   
   
 }
