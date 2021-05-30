@@ -45,8 +45,7 @@ function calculaIMC() {
   let peso = Number(prompt("Digite seu peso!"))  
   let altura = Number((prompt("Digite dua altura")))
 
-  let imc = parseFloat(peso / (altura * altura).toFixed(2))
-  
+  let imc = parseFloat(peso / (altura * altura).toFixed(2)) 
 
   console.log (imc)
 }
@@ -80,7 +79,6 @@ function retornaStringEmMaiuscula() {
    let menssagem = prompt("Digite uma mensagem!")
    menssagem = menssagem.toUpperCase()
 
-
    console.log(menssagem)
 }
 
@@ -91,7 +89,6 @@ function calculaIngressosEspetaculo() {
   let valorIngresso = prompt("Digite o valor de cada ingresso!")
 
   let lucro = valorShow / valorIngresso
-
   console.log(lucro)
 
 }
@@ -99,13 +96,10 @@ function calculaIngressosEspetaculo() {
 // Exercício 8
 function checaStringsMesmoTamanho() {
   let string1 = prompt("Digite uma palavra!")
-  let string2 = prompt("Digite outra palavra!")
-   
-  if (string1.length == string2.length){
-    console.log(true)
-  }else{
-    console.log(false)
-  }
+  let string2 = prompt("Digite outra palavra!")   
+  
+  console.log(string1.length == string2.length)
+  
     
    
 }
@@ -113,9 +107,7 @@ function checaStringsMesmoTamanho() {
 // Exercício 9
 function checaIgualdadeDesconsiderandoCase() {
    let opcao1 = prompt("Digite uma palavra!")
-   let opcao2 = prompt("Digite outra palavra!")
-
-   
+   let opcao2 = prompt("Digite outra palavra!")   
      console.log(opcao1.toUpperCase() === opcao2.toUpperCase())   
      console.log(opcao1.toUpperCase() === opcao2.toUpperCase())
    
