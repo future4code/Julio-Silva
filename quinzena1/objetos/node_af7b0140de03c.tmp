@@ -1,0 +1,41 @@
+
+// 1 - Exercícios de interpretação 
+// A)
+// console.log(filme.elenco[0]) ===> Mateus Nachtergaele
+// console.log(filme.elenco[filme.elenco.length - 1])===> Virginia Cavandish
+// console.log(filme.transmissoesHoje[2]) ===> retorna o objeto {canal1: "Globo", horario: "14h"}
+
+
+// 2 - Exercício de interpretação
+// A)
+// console.log(cachorro) ==> {nome:"Juca", idade: 3, raca:"SRD"}
+// console.log(gato) ==>  {nome:"Juba", idade: 3, raca:"SRD"}
+// console.log(tartaruga) ==> {nome:"tortorugo", idade: 3, raca:"SRD"}
+
+// B)
+// SPRAD (espalhamento)... proporciona a condição de copiar um objeto e alterar sua propriedade
+
+
+// 3 - Exercício de interpretação
+//A)
+// console.log(minhaFuncao(pessoa, "backender")) ==> retrona false 
+// console.log(minhaFuncao(pessoa, "altura")) ==> retorna indefine, porque não foi declarado um valor para altura e nem esta dentro da função.
+
+//B) o valor da propriedade altura nao foi declarado no metodo.
+
+
+// Exercícios de Escrita de código
+
+const pessoa = {
+    nome: "Amanda",
+    apelidos: ["Amandinha", "Mandinha" ,"Mandi"]
+}
+
+function bullyng(rename){
+
+    console.log(`Eu sou Amanda, mas pode me chamar de: ${rename.apelidos[0]}, ${rename.apelidos[1]} ou ${rename.apelidos[2]}`) 
+
+    return
+}
+
+bullyng(pessoa)
