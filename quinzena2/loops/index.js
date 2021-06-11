@@ -48,24 +48,25 @@ function imprimir(arrayOriginal) {
 imprimir(original)
  */
 
-/* 
+
 // c)
- const arrayPar = [ ]
+/*  const arrayPar = []
 
 let original = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55];
 function imprimir(arrayOriginal) {
   for (let i = 0; i < arrayOriginal.length; i++) {
     if (arrayOriginal[i] %2 === 0)  {
         arrayPar.push(arrayOriginal[i])
-        console.log(arrayPar)
+        console.log(arrayOriginal)
     }
   }
   return arrayPar
 }
 
 
-imprimir()
+imprimir([arrayPar])
 
- */
+
 
 // D)
+ */
