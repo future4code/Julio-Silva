@@ -1,4 +1,7 @@
 
+
+
+
 // 1 - Exercícios de interpretação 
 // A)
 // console.log(filme.elenco[0]) ===> Mateus Nachtergaele
@@ -25,6 +28,118 @@
 
 
 // Exercícios de Escrita de código
+
+
+// 1 - Exercício de escrita
+// A)
+  
+   /*  function nandinha(instrutora){     
+        
+        
+       console.log("Eu sou Amanda, mas pode me chamar de:",instrutora.apelidos[0], "ou"
+      ,instrutora.apelidos[1], "ou",instrutora.apelidos[2])
+        
+      
+    
+    }
+
+    const instrutora = {
+        nome: "Amanda",
+        apelidos: ["Amandinha", "Mandinha", "Mandi"],             
+        
+    }      
+   console.log(instrutora)
+   console.log(nandinha(instrutora)
+
+
+
+   // B) 
+     const novoApelido = {
+        ...instrutora,
+        apelidos: ["Chiquinha", "DonaFlorinda", "BibiPerigosa"]
+        
+    }       
+
+    console.log(novoApelido)
+    console.log(nandinha(novoApelido))  */
+
+
+  /*   // 2 - Exercício de escrita
+    // A)
+
+     const irmao1 = {
+        nome: "Jaílson",
+        idade: "93",
+        profissão: "Backend"
+    }
+    const irmao2 = {
+        nome: "Janíson",
+        idade: "98",
+        profissão: "FrontEnd"
+    }
+
+    function irmaos(irmao1,irmao2) {
+
+               
+         console.log([irmao1.nome, irmao1.nome.length, irmao1.idade, irmao1.profissão, irmao1.profissão.length]) 
+         console.log([irmao2.nome, irmao2.nome.length, irmao2.idade, irmao2.profissão, irmao2.profissão.length])
+    }
+
+    console.log(irmaos(irmao1,irmao2))
+
+      */
+
+
+    // 1 - Exercício de escrita
+    // A)
+
+   /*  const carrinho = []
+
+    const fruta1 = {
+        nome: "Banana",
+        disponivel: true
+    }
+
+    const fruta2 = {
+        nome: "Caju",
+        disponivel: true
+    }
+
+    const fruta3 = {
+        nome: "Laranja",
+        disponivel: true
+    }
+
+    function receberFruta(fruta1,fruta2,fruta3) {
+         
+        carrinho.push(fruta1,fruta2,fruta3)        
+    
+    }
+    console.log(carrinho.push(fruta1,fruta2,fruta3))
+    console.log(carrinho)
+ */
+
+    //  ------ desafio -------
+
+ /*    const dadosUsuario = (nome,idade,profissao)=>{
+
+        const nomeUsuario = nome 
+        const idadeUsuario =idade 
+        const profissaoUsuario = profissao 
+
+        return
+    }
+
+    
+
+     const dadosPrompt = {
+        nome: dadosUsuario.nomeUsuario,
+        idade: dadosUsuario.idadeUsuario,
+        profissao: dadosUsuario.profissaoUsuario
+
+    }   
+    
+    console.log(dadosPrompt) */
 
 
 //Exercício 1
@@ -146,6 +261,7 @@ const comparar =(filme1,filme2)=>{
   return comparar
 }
 comparar()
+
 
 
 
