@@ -13,60 +13,103 @@
 // 1.
 // A,B E C)
 
-/* let bichinhos = Number(prompt("Quantos bichinhos você tem ?"));
-let pets = "";
-let petsUsuario = [];
+/* let qntDeBichinhos = Number(prompt("Quantos bichinhos de estimação você tem ?"))
+let arrayPet = []
+let nomesPet = ""
 
-if (bichinhos === 0) {
-  console.log("Que pena! Você pode adotar um pet!");
-} else {
-  for (let i = 0; i < bichinhos; i++)
-    pets = prompt("Qual o nome dos bichinhos ?");
-  petsUsuario.push(pets);
-}
-console.log([pets]);
 
-// 2. */
-// a)
-/* let original = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55] 
-function imprimir (arrayOriginal){
-    for (let i = 0; i < arrayOriginal.length; i++){
-        console.log(arrayOriginal[i])
+  if (qntDeBichinhos === 0){
+    console.log("Que pena! Você pode adotar um pet!")
+  }else{
+    for (let i = 0; i < qntDeBichinhos; i++){
+      nomesPet = prompt("Digite os nomes dos animais de estimação")
+      arrayPet.push(nomesPet)       
     }
-}
+    console.log(arrayPet)
+  }
+  
+ */
 
-imprimir(original) */
+let arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55];
 
-// b)
-/* let original = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55];
-function imprimir(arrayOriginal) {
+function imprimir(numerosArray) {
   for (let i = 0; i < arrayOriginal.length; i++) {
-    console.log(arrayOriginal[i] / 10);
+    console.log(numerosArray[i]);
+  }
+  return imprimir;
+}
+console.log("numeros da ArrayOriginal");
+imprimir(arrayOriginal);
+
+function imprimir2(numerosArray2) {
+  for (let i = 0; i < arrayOriginal.length; i++) {
+    console.log(numerosArray2[i] / 10);
+  }
+  return imprimir2;
+}
+console.log("Array original divido por 10");
+imprimir2(arrayOriginal);
+
+const arrayNumerosPares = [];
+
+function imprimir3(elemento) {
+  if (elemento % 2 === 0) {
+    // console.log(`Eu sou o elemento ${elemento}`)
+    arrayNumerosPares.push(elemento);
   }
 }
 
-imprimir(original)
- */
+for (let i = 0; i < arrayOriginal.length; i++) {
+  const coletaDosPares = imprimir3(arrayOriginal[i]);
+}
+console.log(arrayNumerosPares);
 
-
-// c)
-/*  const arrayPar = []
-
-let original = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55];
-function imprimir(arrayOriginal) {
-  for (let i = 0; i < arrayOriginal.length; i++) {
-    if (arrayOriginal[i] %2 === 0)  {
-        arrayPar.push(arrayOriginal[i])
-        console.log(arrayOriginal)
-    }
-  }
-  return arrayPar
+for (let i = 0; i < arrayOriginal.length; i++){
+  console.log(`O elemento do index ${i} é o ${arrayOriginal[i]}`)
 }
 
 
-imprimir([arrayPar])
+function acharMaior(arrayMaior) {
+  let maior = -Infinity;
+  for (let i = 0; i < arrayOriginal.length; i++) {
+    if (arrayOriginal[i] > maior) {
+      maior = arrayMaior[i];
+    }
+  }
+  return maior;
+}
+console.log(acharMaior(arrayOriginal));
+
+function acharMenor(arrayMenor) {
+  let menor = +Infinity;
+  for (let i = 0; i < arrayOriginal.length; i++) {
+    if (arrayOriginal[i] < menor) {
+      menor = arrayMenor[i];
+    }
+  }
+  return menor;
+}
+console.log(acharMenor(arrayOriginal));
 
 
 
-// D)
- */
+//===========  Deseafio 
+
+const numeroJogador = Number(prompt("Digite um Número"))
+console.log("Vamos Jogar !!!")
+
+let chute = Number(prompt("Chute um Número"))
+let contador = 1
+while(chute !== numeroJogador){
+  console.log("O número chutado foi:", chute)
+  console.log("Errrouuu!")
+
+  chute = Number(prompt("Chute outro Número"))
+  contador++
+}
+console.log("O número chutado foi:", chute)
+console.log("Acerrrrtouuu !!")
+console.log("O numero de tentativas foi:", contador)
+
+
+// A conclusão dos desafios foi feito sobre as revisoes de aulas 
