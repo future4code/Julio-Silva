@@ -6,13 +6,26 @@ function inverteArray(array) {
   }
   return arrayNova;
 }
-console.log(arrayNova);
+
 
 // EXERCÍCIO 02
-function retornaNumerosParesElevadosADois(array) {}
-console.log();
+function retornaNumerosParesElevadosADois(array) {
+  for (let i of array){
+    i = array[i] **2
+  }
+
+}
+
 // EXERCÍCIO 03
-function retornaNumerosPares(array) {}
+function retornaNumerosPares(array) {
+  const arrayPar = []
+  for (let i = 0; i < array.length; i++){
+    if (array[i] %2 === 0){
+      arrayPar.push(array[i])
+    }
+  }
+  return arrayPar
+}
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
@@ -36,12 +49,9 @@ function retornaExpressoesBooleanas() {}
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-  while (n <= n) {
-    return n % 2 === 0;
-  }
-  return retornaNumerosPares;
+ 
 }
-console.log(retornaNNumerosPares());
+
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
@@ -50,8 +60,7 @@ function checaTriangulo(a, b, c) {
   } else if (a == b && b == c && c == a) {
     return "Equilátero"
   }else (a == b || b == c || c == a) 
-     return 'Isósceles'
-  
+     return 'Isósceles' 
     
 }
 console.log(checaTriangulo)
