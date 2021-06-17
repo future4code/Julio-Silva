@@ -10,9 +10,14 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-  for (let i of array){
-    i = array[i] **2
+  const arrayPar2 = []
+  for (let i = 0; i < array.length; i++){
+    if (array[i] %2 === 0){
+      array[i]  * array[i] 
+      arrayPar2.push(array[i])
+    }
   }
+  return arrayPar2
 
 }
 
@@ -35,21 +40,28 @@ function retornaMaiorNumero(array) {
       maior = array[i];
     }
   }
+  
   return maior;
+  
 }
-console.log(maior);
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
   return array.length;
 }
-console.log(array);
+
 // EXERCÍCIO 06
-function retornaExpressoesBooleanas() {}
+function retornaExpressoesBooleanas() {
+
+
+}
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
- 
+ while( n <= n){
+   n %2 === 0 
+ }
+ return retornaNNumerosPares
 }
 
 
@@ -63,7 +75,7 @@ function checaTriangulo(a, b, c) {
      return 'Isósceles' 
     
 }
-console.log(checaTriangulo)
+
 
 
 // EXERCÍCIO 09
@@ -77,13 +89,28 @@ function comparaDoisNumeros(num1, num2) {
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {}
+function segundoMaiorEMenor(array) {
+ 
+  
+  
+}
 
 // EXERCÍCIO 11
-function ordenaArray(array) {}
+function ordenaArray(array) {
+ 
+}
 
 // EXERCÍCIO 12
-function filmeFavorito() {}
+function filmeFavorito() {
+  const filmeFavorito =  {
+
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
+  return filmeFavorito
+}
 
 // EXERCÍCIO 13
 function imprimeChamada() {
