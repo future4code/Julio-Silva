@@ -1,47 +1,61 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
- const arrayNova =[]
- for (let i = array.length -1; i >= 0; i--){
-   arrayNova.push(array[i])
- }
-  return arrayNova
+  const arrayNova = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    arrayNova.push(array[i]);
+  }
+  return arrayNova;
 }
-console.log(arrayNova)
-// EXERCÍCIO 02
-function retornaNumerosParesElevadosADois(array) {
- 
-}
-// EXERCÍCIO 03
-function retornaNumerosPares(array) {
+console.log(arrayNova);
 
-}
+// EXERCÍCIO 02
+function retornaNumerosParesElevadosADois(array) {}
+console.log();
+// EXERCÍCIO 03
+function retornaNumerosPares(array) {}
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-
+  let maior = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > maior) {
+      maior = array[i];
+    }
+  }
+  return maior;
 }
+console.log(maior);
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  return array.length;
 }
-
+console.log(array);
 // EXERCÍCIO 06
-function retornaExpressoesBooleanas() {
-
-}
+function retornaExpressoesBooleanas() {}
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-
+  while (n <= n) {
+    return n % 2 === 0;
+  }
+  return retornaNumerosPares;
 }
+console.log(retornaNNumerosPares());
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if (a != b && (b != c) != a) {
+    return "Escaleno"
+  } else if (a == b && b == c && c == a) {
+    return "Equilátero"
+  }else (a == b || b == c || c == a) 
+     return 'Isósceles'
+  
+    
 }
+console.log(checaTriangulo)
+
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
@@ -54,19 +68,13 @@ function comparaDoisNumeros(num1, num2) {
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {
-
-}
+function segundoMaiorEMenor(array) {}
 
 // EXERCÍCIO 11
-function ordenaArray(array) {
-
-}
+function ordenaArray(array) {}
 
 // EXERCÍCIO 12
-function filmeFavorito() {
-
-}
+function filmeFavorito() {}
 
 // EXERCÍCIO 13
 function imprimeChamada() {
@@ -74,63 +82,37 @@ function imprimeChamada() {
 }
 
 // EXERCÍCIO 14
-function criaRetangulo(lado1, lado2) {
-
-}
+function criaRetangulo(lado1, lado2) {}
 
 // EXERCÍCIO 15
-function anonimizaPessoa(pessoa) {
-
-}
+function anonimizaPessoa(pessoa) {}
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {
-
-}
+function maioresDe18(arrayDePessoas) {}
 
 // EXERCÍCIO 16B
-function menoresDe18(arrayDePessoas) {
-
-  
-
-}
+function menoresDe18(arrayDePessoas) {}
 
 // EXERCÍCIO 17A
-function multiplicaArrayPor2(array) {
-
-}
+function multiplicaArrayPor2(array) {}
 
 // EXERCÍCIO 17B
-function multiplicaArrayPor2S(array) {
-
-}
+function multiplicaArrayPor2S(array) {}
 
 // EXERCÍCIO 17C
-function verificaParidade(array) {
-
-}
+function verificaParidade(array) {}
 
 // EXERCÍCIO 18A
-function retornaPessoasAutorizadas(pessoas) {
-
-}
+function retornaPessoasAutorizadas(pessoas) {}
 
 // EXERCÍCIO 18B
-function retornaPessoasNaoAutorizadas(pessoas) {
-
-}
+function retornaPessoasNaoAutorizadas(pessoas) {}
 
 // EXERCÍCIO 19A
-function ordenaPorNome(consultasNome) {
-
-}
+function ordenaPorNome(consultasNome) {}
 
 // EXERCÍCIO 19B
-function ordenaPorData(consultasData) {
-
-}
+function ordenaPorData(consultasData) {}
 
 // EXERCÍCIO 20
-function calculaSaldo(contas) {
-
-}
+function calculaSaldo(contas) {}
