@@ -13,8 +13,8 @@ function retornaNumerosParesElevadosADois(array) {
   const arrayPar2 = []
   for (let i = 0; i < array.length; i++){
     if (array[i] %2 === 0){
-      array[i]  * array[i] 
-      arrayPar2.push(array[i])
+  let potencia =   (array[i]  ** 2) 
+      arrayPar2.push(potencia)
     }
   }
   return arrayPar2
@@ -72,13 +72,9 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
- if (n <= n ){
 
- }
- 
- return retornaNNumerosPares
 }
-retornaNNumerosPares(3)
+
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
@@ -95,12 +91,13 @@ function checaTriangulo(a, b, c) {
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
-  // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+  const objetoCriado =
+  {
+    maiorNumero: num1,
+    maiorDivisivelPorMenor: (num1 %num2 === 0),
+    diferenca: (num1 / num2)
+  }
+  return objetoCriado
 }
 
 // EXERCÍCIO 10
@@ -162,7 +159,17 @@ function anonimizaPessoa(pessoa) {
 }
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {}
+function maioresDe18(arrayDePessoas) {
+    const maiorIdade = arrayDePessoas.map((maior) => {
+      {
+        nome: maior.nome
+        idade: maior.idade
+      }
+    })
+    return maiorIdade
+  }
+
+
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {}
