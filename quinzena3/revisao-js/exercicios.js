@@ -152,7 +152,14 @@ function criaRetangulo(lado1, lado2) {
 }
 
 // EXERCÍCIO 15
-function anonimizaPessoa(pessoa) {}
+function anonimizaPessoa(pessoa) {
+  const novoObjeto = {
+    ...pessoa,
+    nome: "ANÔNIMO"
+  }
+
+  return novoObjeto
+}
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {}
