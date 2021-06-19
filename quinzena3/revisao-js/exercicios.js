@@ -95,13 +95,23 @@ function checaTriangulo(a, b, c) {
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
-  const objetoCriado =
+  const compararNumeros =
   {
-    maiorNumero: num1,
-    maiorDivisivelPorMenor: (num1 %num2 === 0),
-    diferenca: (num1 / num2)
+    maiorNumero: 0,
+    maiorDivisivelPorMenor: false,
+    diferenca: 0
   }
-  return objetoCriado
+  
+  if (num1 > num2 ){
+    compararNumeros.maiorNumero = num1
+    compararNumeros.maiorDivisivelPorMenor = (num1 % num2 === 0)
+    compararNumeros.diferenca = (num1 - num2)
+  }else{
+    compararNumeros.maiorNumero = num2
+    compararNumeros.maiorDivisivelPorMenor = (num2 % num1 === 0)
+    compararNumeros.diferenca = (num2 - num1)
+  }
+  return compararNumeros
 }
 
 // EXERCÍCIO 10
@@ -113,7 +123,7 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
- 
+  
 }
 
 // EXERCÍCIO 12
@@ -143,13 +153,7 @@ function imprimeChamada() {
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
- const informacoes = {
-   largura: lado1,
-   altura: lado2,
-   perimetro: (2*(lado1 + lado2)),
-   area: (lado1 * lado2)
- }
- return informacoes
+
 }
 
 // EXERCÍCIO 15
@@ -164,11 +168,8 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-    const maiorIdade = arrayDePessoas.map((maior) => {
-      {
-        nome: maior.nome
-        idade: maior.idade
-      }
+    const maiorIdade = arrayDePessoas.filter((maior) => {
+     return maior.idade  >= 18
     })
     return maiorIdade
   }
@@ -176,19 +177,44 @@ function maioresDe18(arrayDePessoas) {
 
 
 // EXERCÍCIO 16B
-function menoresDe18(arrayDePessoas) {}
+function menoresDe18(arrayDePessoas) {
+  const menorIdade = arrayDePessoas.filter((menor) => {
+    return menor.idade  < 18
+   })
+   return menorIdade
+}
 
 // EXERCÍCIO 17A
-function multiplicaArrayPor2(array) {}
+function multiplicaArrayPor2(array) {
+  const multiplicaPor2 = array.map((conta) =>{
+    return conta *2
+  })
+  
+  return multiplicaPor2
+}
 
 // EXERCÍCIO 17B
-function multiplicaArrayPor2S(array) {}
+function multiplicaArrayPor2S(array) {
+  const multiplica2string = array.map((conta) =>{
+     (conta *2).toString()
+  })
+  
+  return multiplica2string
+}
 
 // EXERCÍCIO 17C
-function verificaParidade(array) {}
+function verificaParidade(array) {
+  
+
+  
+  
+  return multiplica3
+}
 
 // EXERCÍCIO 18A
-function retornaPessoasAutorizadas(pessoas) {}
+function retornaPessoasAutorizadas(pessoas) {
+ 
+}
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {}
