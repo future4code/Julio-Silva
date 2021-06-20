@@ -146,16 +146,18 @@ function filmeFavorito() {
     nome: "O Diabo Veste Prada",
     ano: 2006,
     diretor: "David Frankel",
-    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"],
-  };
+    atores: ["Meryl Streep","Anne Hathaway","Emily Blunt","Stanley Tucci"]
+  }
   return elencoDoFilme;
 }
 
 // EXERCÍCIO 13
 function imprimeChamada() {
-  const chamdaFilme = filmeFavorito();
-  return `Venha assistir ao filme ${chamdaFilme.nome}, de ${chamdaFilme.ano}, dirigido por ${chamdaFilme.diretor} e estrelado por ${chamdaFilme.atores}.`;
+  const chamdaFilme = filmeFavorito()
+  return (`Venha assistir ao filme ${chamdaFilme.nome}, de ${chamdaFilme.ano}, dirigido por ${chamdaFilme.diretor} e estrelado por ${chamdaFilme.atores.join(', ')}.`)
+  // usando join para unir os valores e separar por virgula e espaço
 }
+
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
@@ -206,11 +208,11 @@ function multiplicaArrayPor2(array) {
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-  const multiplica = multiplicaArrayPor2(array);
+  const multiplica = multiplicaArrayPor2(array)
   const contaFeita = multiplica.map((input) => {
-    return input.toString();
-  });
-  return contaFeita;
+    return input.toString()
+  })
+  return contaFeita
 }
 
 // EXERCÍCIO 17C
@@ -275,6 +277,8 @@ function ordenaPorData(consultasData) {
     let resultado = [ano, mes, dia];
     return resultado;
   }
+
+  
 
   let checarTrue = false;
   while (!checarTrue) {
