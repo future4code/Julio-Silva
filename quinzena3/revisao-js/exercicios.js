@@ -125,42 +125,36 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  arrayOrdem = array.sort(function (a, b) {
-    return a - b;
-  });
-  return arrayOrdem;
+  let verificar = true;
+  while (verificar === true) {
+    verificar = false;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i + 1]) {
+        let tempVar = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = tempVar;
+        verificar = true;
+      }
+    }
+  }
+  return array;
 }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-  const filmeFavorito = {
+  const elencoDoFilme = {
     nome: "O Diabo Veste Prada",
     ano: 2006,
     diretor: "David Frankel",
-    atores: [
-      " Meryl Streep",
-      " Anne Hathaway",
-      " Emily Blunt",
-      " Stanley Tucci",
-    ],
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"],
   };
-  return filmeFavorito;
+  return elencoDoFilme;
 }
 
 // EXERCÍCIO 13
 function imprimeChamada() {
-  const filmeFavorito = {
-    nome: "O Diabo Veste Prada",
-    ano: 2006,
-    diretor: "David Frankel",
-    atores: [
-      " Meryl Streep",
-      " Anne Hathaway",
-      " Emily Blunt",
-      " Stanley Tucci",
-    ],
-  };
-  return `Venha assistir ao filme ${filmeFavorito.nome}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.atores}.`;
+  const chamdaFilme = filmeFavorito();
+  return `Venha assistir ao filme ${chamdaFilme.nome}, de ${chamdaFilme.ano}, dirigido por ${chamdaFilme.diretor} e estrelado por ${chamdaFilme.atores}.`;
 }
 
 // EXERCÍCIO 14
@@ -212,11 +206,11 @@ function multiplicaArrayPor2(array) {
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-  const multiplica2string = array.map((conta) => {
-    (conta * 2).toString();
+  const multiplica = multiplicaArrayPor2(array);
+  const contaFeita = multiplica.map((input) => {
+    return input.toString();
   });
-
-  return multiplica2string;
+  return contaFeita;
 }
 
 // EXERCÍCIO 17C
@@ -242,9 +236,8 @@ function retornaPessoasAutorizadas(pessoas) {
       pessoasNaoAutorizadas.push(nacesso);
     }
   });
-  return pessoasNaoAutorizadas
+  return pessoasNaoAutorizadas;
 }
-
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {
@@ -254,7 +247,7 @@ function retornaPessoasNaoAutorizadas(pessoas) {
       pessoasAutorizadas.push(sacesso);
     }
   });
-  return pessoasAutorizadas
+  return pessoasAutorizadas;
 }
 
 // EXERCÍCIO 19A
@@ -274,11 +267,44 @@ function ordenaPorNome(consultasNome) {
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
-  const agendaPorData = []
-  for(let i = 0; i < consultasData.length; i++){
-    
+  function transformaData(dataParametro) {
+    const quebraPalavra = dataParametro.split(`/`);
+    let dia = quebraPalavra[0];
+    let mes = quebraPalavra[1];
+    let ano = quebraPalavra[2];
+    let resultado = [ano, mes, dia];
+    return resultado;
   }
+
+  let checarTrue = false;
+  while (!checarTrue) {
+    checarTrue = true;
+    for (let i = 0; i < consultasData.length - 1; i++) {
+      let dataAntes = new Date(transformaData(consultasData[i].dataDaConsulta));
+      let dataSeguinte = new Date(
+        transformaData(consultasData[i + 1].dataDaConsulta)
+      );
+      if (dataSeguinte < dataAntes) {
+        checarTrue = false;
+        let tmp = consultasData[i + 1];
+        consultasData[i + 1] = consultasData[i];
+        consultasData[i] = tmp;
+      }
+    }
+  }
+  return consultasData;
 }
 
 // EXERCÍCIO 20
-function calculaSaldo(contas) {}
+function calculaSaldo(contas) {
+  for (let i = 0; i < contas.length; i++) {
+    let resultado;
+    resultado = 0;
+    for (saldo of contas[i].compras) {
+      resultado += Number(saldo);
+    }
+    contas[i].saldoTotal = contas[i].saldoTotal - resultado;
+    console.log(contas[i].saldoTotal);
+  }
+  return contas;
+}
