@@ -11,8 +11,7 @@
  * 
  */
 
-<<<<<<< HEAD
-=======
+
 // boas vindas
 console.log("Bem Vindo ao jogo de Blackjack!")
 
@@ -68,4 +67,3 @@ if (confirm("Deseja iniciar uma rodada?")) {
 }
 
 
->>>>>>> bb6c92f70d6a8d82632c7c7ffe25f7aa56f70e3b
