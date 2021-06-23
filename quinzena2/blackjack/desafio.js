@@ -11,6 +11,7 @@
  * 
  */
 
+
 // boas vindas
 console.log("Bem Vindo ao jogo de Blackjack!")
 
@@ -64,5 +65,6 @@ if (confirm("Deseja iniciar uma rodada?")) {
   // mensagem quando usuário não inicia o jogo
   console.log("O jogo acababou !!")
 }
+
 
 
