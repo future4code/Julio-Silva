@@ -1,0 +1,121 @@
+body{
+    font-family: 'Patrick Hand', cursive;
+    padding: 0;
+    margin:0;
+    background-color: bisque;
+    font-size: 16px;
+    margin-left: 25px;
+    
+}
+
+.boasVindas{
+    color: brown;
+    text-align: center;
+}
+
+.boasVindas h1{
+    font-size: 3.5rem;
+}
+
+.boasVindas p{
+    font-size: 1.5rem;
+}
+
+
+.linkspages a{
+    font-size: 1.5rem;
+    display: block;
+    text-align:center ;
+    margin-top: 8px;
+    margin: 5px;
+    text-decoration: none;
+    color:black;
+}
+
+.linkspages :hover{
+    cursor: pointer;
+}
+
+.rodape{
+    width: 440px;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: brown;
+    text-align: center;
+    
+}
+
+.imgMidiasSociais img{
+height: 50px;
+padding: 5px;
+
+}
+
+.nomeLoja{
+    font-size: 3.5rem;
+    color: brown;
+    text-align: center;
+}
+
+.ContEstoque {
+    color: brown;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 40px 0 40px 0;
+    
+}
+
+.tabelaProduto{
+    margin-top:40px ;
+    color: brown;
+}
+
+
+.tabelaProduto img{
+    height: 150px;
+    border-radius: 60px;
+    padding: 4px;
+}
+
+.tabelaProduto td{
+    text-align: center;
+    margin: 10px;
+    border: solid 1px;
+    
+}
+
+.tabelaProduto th{
+    padding: 10px;
+    border: solid 1px;
+}
+
+.listaFuncionarios ul,li{   
+    font-size: 1.3rem;
+    color: brown;
+   
+}
+
+.listaFuncionarios h2{
+    color: brown;
+}
+
+.addProduto{
+    color: brown;
+    margin: 0 auto;
+}
+
+input{
+    width: 200px;
+   
+}
+
+.formPrincipal{
+width: 350px;
+height: 400px;
+text-align: end;
+}
+
+.imgLoja{
+    text-align: center;
+    
+}

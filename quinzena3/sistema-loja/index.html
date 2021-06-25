@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/frutas.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Quitanda Online</title>
 </head>
-<body>
-    <div>
-        <h1>Bem-vind@ ao <em>Quitanda Online</em>!</h1>
-        <p>Venha conhecer a mais nova Quitanda online, e compre seus produtos fresquinhos</p>
-    </div>
 
-    <div>
-        <a href="index.html"  >Página Inicial</a>
+<body>
+    <header  class="boasVindas">
+        <div>
+            <h1>Bem-vindos ao <em>Quitanda Online</em>!</h1>
+            <p>Venha conhecer a mais nova Quitanda online, e compre seus produtos fresquinhos, direto da roça</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="imgLoja">
+            <img src="./img/quitanda-na-sua-empresa.jpg" alt="imagem da loja">
+        </div>
+        
+    </main>
+
+    <div class="linkspages">
+        <a href="index.html">Página Inicial</a>
         <a href="ctrl-estoque.html">Controle de Estoque</a>
         <a href="add-produto.html">Adicionar Produto</a>
         <a href="funcionarios.html">Funcionários</a>
@@ -25,15 +41,18 @@
 
     </div>
 
-    <div>
+    <div class="rodape">
+        <footer>
         <p>Siga-nos nas redes sociais!</p>
-
-        <div>
-            <!-- Sei que não é uma boa pratica e tambem ainda não vimos CSS mas decidi colocar width nas imagens apenas para não sair muito fora o layout -->
-            <img src="https://image.flaticon.com/icons/png/512/25/25305.png" width="200px"/>
-            <img src="https://image.flaticon.com/icons/png/512/25/25425.png" width="200px"/>
-            <img src="https://image.flaticon.com/icons/png/512/8/8800.png" width="200px"/>
-        </div>
+        
+            <div class="imgMidiasSociais">
+                <!-- Sei que não é uma boa pratica e tambem ainda não vimos CSS mas decidi colocar width nas imagens apenas para não sair muito fora o layout -->
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png"  />
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png"  />
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png"  />
+            </div>
+        </footer>
     </div>
 </body>
+
 </html>
