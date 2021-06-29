@@ -140,3 +140,11 @@ td button {
 img{
     height: 80px;
 }
+
+.btn-comprar :active{
+    color:white;
+}
+
+.btn-comprar:hover{
+    background-color: #635a3d;
+}
