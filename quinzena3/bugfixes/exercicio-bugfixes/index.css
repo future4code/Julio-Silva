@@ -30,7 +30,7 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    display: inline-block;
 }
 
 div img {
@@ -103,6 +103,10 @@ table {
     width: 60%;
 }
 
+td{
+    text-align: center;
+}
+
 td button {
     background-color: #fadf63;
     width: 150px;
@@ -130,4 +134,8 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+img{
+    height: 80px;
 }
