@@ -104,6 +104,7 @@ div:last-child {
 }
 
 table {
+    margin: auto;
     width: 60%;
 }
 
@@ -126,6 +127,7 @@ td button {
 
 
 #back-button {
+    display: block;
     margin: auto;
     background-color: white;
     width: 100px;
