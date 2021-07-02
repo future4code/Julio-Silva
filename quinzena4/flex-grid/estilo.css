@@ -132,11 +132,16 @@ footer {
   font-size: 20px;
 }
 
-@media (max-width: 600px) {
+
+/* falta adicionar a responsividade  */
+
+
+
+/* @media (max-width: 600px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
   .navegation {
     display: block;
   }
-}
+} */
