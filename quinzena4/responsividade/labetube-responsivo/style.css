@@ -130,10 +130,41 @@ img {
 /* Adicionando responsividade */
 
 @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  
- 
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  header{
+    font-size: 9px;
+    display: block;
+    text-align: center;
+  }
+
+  .btn-pesquisar input{ 
+   
+    width: 100px;
+  }
+
+  .btn-pesquisar{
+    justify-content: center;
+  }
+
+
+
+  .items{
+    display: flex;
+    flex-direction: column;
+    height:300px;
+  }
 
  
+
+ footer{
+   font-size: 9px;
+   text-align: center;
+ }
 
   
 
