@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Akaya Kanadaka", cursive;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.logo-page {
+  height: 60px;
+}
+
+.btn-pesquisar {
+  display: flex;
+  height: 20px;
+}
+
+header {
+  background-image: linear-gradient( 45deg, rgba(43, 93, 116, 0.664), rgba(94, 82, 82, 0.541));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+  grid-column: 1/-1;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.btn-pesquisar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-pesquisar button {
+  width: 40px;
+  margin: 0 2px;
+  display: block;
+}
+
+.btn-pesquisar a button i {
+  cursor: pointer;
+}
+
+.items {
+  height: 250px;
+  gap: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 8px darkgrey;
+  /* background-color: forestgreen; */
+  display: block;
+  background-color: aliceblue;
+}
+
+.items:hover {
+  background-color: rgba(199, 195, 195, 0.719);
+  transition: 0.3s;
+  /* cursor: pointer; */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin: 8px;
+  justify-content: center;
+  background-image: linear-gradient( 45deg, rgba(43, 93, 116, 0.664), rgba(94, 82, 82, 0.541));
+}
+
+.items h2 {
+  margin-top: 50px;
+  opacity: 0.5;
+}
+
+main img {
+  max-height: 70%;
+  max-width: 80%;
+  box-shadow: 2px 2px 8px darkgrey;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-image: linear-gradient( 45deg, rgba(43, 93, 116, 0.664), rgba(94, 82, 82, 0.541));
+  grid-column: 1/-1;
+}
+
+/* Estilizando a tela de exibição do vídeo */
+
+.exibicao {
+  height: 80vh;
+  /* margin-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(199, 195, 195, 0.719);
+}
+
+.descricao {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.exibicao img {
+  height: 80%;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+
+/* Adicionando responsividade */
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  header{
+    font-size: 9px;
+    display: block;
+    text-align: center;
+  }
+
+  .btn-pesquisar input{ 
+   
+    width: 100px;
+  }
+
+  .btn-pesquisar{
+    justify-content: center;
+  }
+
+
+
+  .items{
+    display: flex;
+    flex-direction: column;
+    height:300px;
+  }
+
+ 
+
+ footer{
+   font-size: 9px;
+   text-align: center;
+ }
+
+  
+
+ 
+
+
+}
