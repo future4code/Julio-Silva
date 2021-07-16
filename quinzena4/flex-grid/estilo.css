@@ -133,15 +133,15 @@ footer {
 }
 
 
-/* falta adicionar a responsividade  */
 
 
 
-/* @media (max-width: 600px) {
-  .container {
+
+ @media (max-width: 600px) {
+  .produto {
     grid-template-columns: repeat(2, 1fr);
   }
   .navegation {
     display: block;
   }
-} */
+}
