@@ -1,0 +1,21 @@
+.small-card {
+  width: 40vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.small-card img {
+  height: 30px;
+  margin: 0 5px;
+}
+
+.small-card > p {
+  margin-left: 8px;
+}
+
+.small-card :nth-child(2) {
+  font-weight: bold;
+}
