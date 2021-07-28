@@ -5,7 +5,12 @@ import FormEnsinoSuperior from "./Pages/Etapa2";
 import FormInfoGeraisEnsino from "./Pages/Etapa3";
 import Agradecimento from "./Pages/EtapaFinal";
 
-
+const LayoutMainContainer = styled.div`
+  font-size: 2em;
+  margin: 15px; 
+ 
+  text-align: center;
+`;
 
 
 
@@ -37,10 +42,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Future Forms</h1>
+        <LayoutMainContainer>Future Forms</LayoutMainContainer>
         <div>{this.visualizar()}</div>
         {this.state.etapa !== 4 && (
-          <button onClick={this.proximo}>Próxima página</button>
+          <LayoutMainContainer onClick={this.proximo}>Próxima página</LayoutMainContainer>
         )}
       </div>
     );

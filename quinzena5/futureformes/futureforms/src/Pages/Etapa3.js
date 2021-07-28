@@ -1,10 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+
+
+const LayoutForm1  = styled.div`
+  
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 300px;
+  text-align: center;
+  padding: 10px;
+  
+`;
 
 export default class FormInfoGeraisEnsino extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Etapa 3 - Ensino Superior Incompleto</h1>
+      <LayoutForm1>
+        <h1>Etapa 3 - INFORMAÇÕES GERAIS DE ENSINO</h1>
         <input
           value={this.props.graduacaoIncompleta}
           type="text"
@@ -15,7 +29,7 @@ export default class FormInfoGeraisEnsino extends React.Component {
           <option value="0">Não fiz curso complementar</option>
           <option value="1">Curso técnico</option>
         </select>
-      </div>
+      </LayoutForm1>
     );
   }
 }
