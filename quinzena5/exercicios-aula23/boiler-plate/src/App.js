@@ -22,7 +22,7 @@ class App extends React.Component {
   state = {
     tarefas: [],
     inputValue: "",
-    completa: "",
+    filtro: "",
   };
 
   componentDidUpdate(prevState) {
@@ -48,24 +48,25 @@ class App extends React.Component {
     novasTarefas.push({
       id: Date.now(),
       texto: this.state.inputValue,
-      completa: this.state.value,
+      completa: this.state.filtro,
     });
     this.setState({ tarefas: novasTarefas });
   };
 
-  // alterando o estado do filtro para true ou false (excluindo o item da lista)
   selectTarefa = (id) => {
-    const novaListaDeTarefas = this.state.tarefas.filter((tarefa) => {
-      return id !== tarefa.id;
-    });
-    this.setState({ tarefas: novaListaDeTarefas });
-  };
+    const listaTarefas = [...this.state.tarefas]
+    const tarefaID = listaTarefas.map((array) => {
+      if (array.id === id){
+       array.completa = !array.completa}
+        return array
+      })
+      this.setState({tarefas: tarefaID})
+    }
 
   //capturando o valor do input options
   onChangeFilter = (event) => {
-    this.setState({ completa: event.target.value });
-    //teste para verificar o retorno
-    // console.log("valor option", this.state);
+    this.setState({ filtro: event.target.value });
+   
   };
 
   render() {
@@ -94,8 +95,8 @@ class App extends React.Component {
           <label>Filtro</label>
           <select value={this.state.filter} onChange={this.onChangeFilter}>
             <option value="">Nenhum</option>
-            <option value="pendente">Pendentes</option>
-            <option value="completa">Completas</option>
+            <option value="pendentes">Pendentes</option>
+            <option value="completas">Completas</option>
           </select>
         </InputsContainer>
         <TarefaList>
