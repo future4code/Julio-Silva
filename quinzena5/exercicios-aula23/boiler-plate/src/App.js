@@ -48,7 +48,7 @@ class App extends React.Component {
     novasTarefas.push({
       id: Date.now(),
       texto: this.state.inputValue,
-      completa: this.state.option,
+      completa: this.state.value,
     });
     this.setState({ tarefas: novasTarefas });
   };
@@ -63,9 +63,9 @@ class App extends React.Component {
 
   //capturando o valor do input options
   onChangeFilter = (event) => {
-    this.setState({ option: event.target.value });
+    this.setState({ completa: event.target.value });
     //teste para verificar o retorno
-    console.log("valor option", this.state);
+    // console.log("valor option", this.state);
   };
 
   render() {
@@ -94,8 +94,8 @@ class App extends React.Component {
           <label>Filtro</label>
           <select value={this.state.filter} onChange={this.onChangeFilter}>
             <option value="">Nenhum</option>
-            <option value="pendentes">Pendentes</option>
-            <option value="completas">Completas</option>
+            <option value="pendente">Pendentes</option>
+            <option value="completa">Completas</option>
           </select>
         </InputsContainer>
         <TarefaList>
