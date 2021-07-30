@@ -25,9 +25,17 @@ class App extends React.Component {
     completa: "",
   };
 
-  componentDidUpdate(prevState) {}
+  componentDidUpdate(prevState) {
+    localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas));
+  }
 
-  componentDidMount() {}
+  componentDidMount() {
+    const listaDeTarefas2 = localStorage.getItem("tarefas");
+    const chamaListaTarefa = JSON.parse(listaDeTarefas2);
+    if (chamaListaTarefa) {
+      this.setState({ tarefas: chamaListaTarefa });
+    }
+  }
 
   // capturando o valor do input
   onChangeInput = (event) => {
@@ -53,13 +61,15 @@ class App extends React.Component {
     this.setState({ tarefas: novaListaDeTarefas });
   };
 
+  //capturando o valor do input options
   onChangeFilter = (event) => {
     this.setState({ option: event.target.value });
-    console.log("valor option", this.state);
     //teste para verificar o retorno
+    console.log("valor option", this.state);
   };
 
   render() {
+    // selecionando as tarefas concluidas e pendentes
     const listaFiltrada = this.state.tarefas.filter((tarefa) => {
       switch (this.state.filtro) {
         case "pendentes":
