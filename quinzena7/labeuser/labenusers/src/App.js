@@ -1,74 +1,73 @@
-import React from "react";
+import React from 'react'
+import TelaAdicionar from './components/TelaAdicionar'
+import TelaListaUsuarios from './components/TelaListaUsuarios'
+import styled from 'styled-components'
 
-import axios from "axios";
+const Pagina = styled.div`
+width: 50vw;
+min-height: 50vh;
+display: flex;
+margin: 0 auto;
+justify-content: center;
+border: 1px solid black;
+h1{
+  margin: 8vh;
+}
+input{
+  margin-bottom: 16px;
+}
+button{
+  margin: 16px 0;
+}
+`
 
-class App extends React.Component {
+
+export default class App extends React.Component {
   state = {
-    listaUsuarios: [],
-    name: "",
-    email: "",
-  };
+    adicionarUsuario: true,
+    usuarioVerMais: "",
+    telaVerListaUsuarios: false,
+  }
 
-  onChangeNome = (e) => {
-    this.setState({ name: e.target.value });
-  };
+  acessaTelaNovoUsuario = () => {
+    this.setState({
+      adicionarUsuario: true,
+      telaVerListaUsuarios: false,
+      usuarioVerMais: false,
+    })
+  }
 
-  onChangeEmail = (e) => {
-    this.setState({ email: e.target.value });
-  };
-
-  criarUsuarios = async () => {
-    await axios.post(
-      "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/",
-      {
-        name: this.state.name,
-        email: this.state.email,
-      },
-      {
-        headers: {
-          Autorization: "julio-silva-johnson",
-        },
-      }
-    );
-    this.criarUsuarios().then((response) => {
-      alert("novo usuário cridado com sucesso");
-      this.setState({ name: "" });
-      this.setState({ email: "" });
-      this.setState({ listaUsuarios: response.data });
-    });
-  };
-
-
-
-
-  mostrarListasuario = () =>{
-
+  acessaListadeUsuarios = () => {
+    this.setState({
+      adicionarUsuario: false,
+      telaVerListaUsuarios: true,
+    })
   }
 
   render() {
+    const renderizarPagina = () => {
+      if (this.state.adicionarUsuario) {
+        return (
+          <>
+            <TelaAdicionar
+              acessaListadeUsuarios={this.acessaListadeUsuarios}
+              verMais={this.verMais}
+            />
+          </>)
+      } else if (this.state.telaVerListaUsuarios) {
+        return <TelaListaUsuarios
+          acessaTelaNovoUsuario={this.acessaTelaNovoUsuario}
+          acessaListadeUsuarios={this.acessaListadeUsuarios}
+          verMais={this.verMais}
+        />
+      }
+    }
     return (
-      <>
-        <div className="app-header">
-          <h2>Cadastro novo usuário</h2>
-          <form>
-            <label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Digite o nome do usuário"
-              />
-              <input
-                type="text"
-                name="email"
-                placeholder="Digite o E-mail do usuário"
-              />
-            </label>
-            <button onClick={this.criarUsuarios}>Criar usúario</button>
-          </form>
-        </div>
-      </>
+      <div className="App">
+        <Pagina>
+          {renderizarPagina()}
+        </Pagina>
+      </div>
     );
   }
 }
-
-export default App;
