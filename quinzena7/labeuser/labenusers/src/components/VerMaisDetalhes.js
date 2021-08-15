@@ -3,8 +3,16 @@ import axios from "axios";
 import RemoverCadastro from "./RemoverCadastro";
 import styled from "styled-components";
 
-const CardUsuario = styled.div``;
-const TelaDetalhes = styled.div``;
+const CardUsuario = styled.div`
+  background: lightslategray;
+  display: flex;
+  justify-content: space-around;
+`;
+const TelaDetalhes = styled.div`  
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+`;
 export default class VerMaisDetalhes extends React.Component {
   state = {
     usuario: {},

@@ -4,6 +4,8 @@ import TelaListaUsuarios from './components/TelaListaUsuarios'
 import styled from 'styled-components'
 
 const Pagina = styled.div`
+
+border-radius: 8px;
 width: 50vw;
 min-height: 50vh;
 display: flex;

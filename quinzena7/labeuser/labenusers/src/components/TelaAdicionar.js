@@ -1,5 +1,21 @@
 import React from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const CadastroNovolayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  margin-left: 4px;
+`;
+
+const ConfigInput = styled.input`
+  width: 50%;
+`;
+const ConfigButton = styled.button`
+  width: 50%;
+`;
 
 export default class TelaAdicionar extends React.Component {
   state = {
@@ -48,20 +64,28 @@ export default class TelaAdicionar extends React.Component {
 
   render() {
     return (
-      <div>
+      <CadastroNovolayout>
         <h1>Adicionar Novo Usuário</h1>
-        <label name={"inputNome"}>Nome:</label>
-        <input onChange={this.onChangeNome} value={this.state.nome} />
+        <label name={"inputNome"}></label>
+        <ConfigInput
+          onChange={this.onChangeNome}
+          value={this.state.nome}
+          placeholder="Digite o nome do usuário"
+        />
         <br />
-        <label>E-mail:</label>
-        <input onChange={this.onChangeEmail} value={this.state.email} />
+        <label></label>
+        <ConfigInput
+          onChange={this.onChangeEmail}
+          value={this.state.email}
+          placeholder="Digite o E-mail do usuário"
+        />
         <br />
-        <button onClick={this.onClickEnviar}>Adicionar</button>
+        <ConfigButton onClick={this.onClickEnviar}>Adicionar</ConfigButton>
         <hr />
-        <button onClick={this.props.acessaListadeUsuarios}>
+        <ConfigButton onClick={this.props.acessaListadeUsuarios}>
           Ver todos os usuários
-        </button>
-      </div>
+        </ConfigButton>
+      </CadastroNovolayout>
     );
   }
 }

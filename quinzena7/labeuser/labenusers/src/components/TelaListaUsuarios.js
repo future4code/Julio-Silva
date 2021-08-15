@@ -4,7 +4,11 @@ import RemoverCadastro from "./RemoverCadastro.js";
 import VerMaisDetalhes from "./VerMaisDetalhes.js";
 import styled from "styled-components";
 
-const CardLista = styled.div``;
+const CardLista = styled.div`  
+  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+`;
 
 export default class TelaListaUsuarios extends React.Component {
   state = {
