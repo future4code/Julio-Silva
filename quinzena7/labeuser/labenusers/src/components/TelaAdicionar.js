@@ -2,19 +2,22 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 
-const CadastroNovolayout = styled.div`
+const CadastroNovolayout = styled.div`  
   display: flex;
   flex-direction: column;
   padding: 10px;
   align-items: center;
-  margin-left: 4px;
+  margin: 20px auto;
 `;
 
 const ConfigInput = styled.input`
-  width: 50%;
+  width: 50%;  
+  outline: none;
 `;
 const ConfigButton = styled.button`
-  width: 50%;
+  width: 40%;
+  border-radius: 5px;  
+  cursor: pointer;
 `;
 
 export default class TelaAdicionar extends React.Component {

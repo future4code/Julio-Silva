@@ -3,8 +3,7 @@ import axios from "axios";
 import RemoverCadastro from "./RemoverCadastro";
 import styled from "styled-components";
 
-const CardUsuario = styled.div`
-  background: lightslategray;
+const CardUsuario = styled.div`  
   display: flex;
   justify-content: space-around;
 `;
@@ -12,6 +11,11 @@ const TelaDetalhes = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8px;
+`;
+const ConfigButton = styled.button`
+  width: 40%;
+  border-radius: 5px;
+  cursor: pointer;
 `;
 export default class VerMaisDetalhes extends React.Component {
   state = {
@@ -43,12 +47,12 @@ export default class VerMaisDetalhes extends React.Component {
     return (
       <TelaDetalhes>
         <div>
-          <button onClick={this.props.acessaTelaNovoUsuario}>
+          <ConfigButton onClick={this.props.acessaTelaNovoUsuario}>
             Adicionar novo Usuário
-          </button>
-          <button onClick={this.props.voltarParaLista}>
+          </ConfigButton>
+          <ConfigButton onClick={this.props.voltarParaLista}>
             Voltar à lista de usuários
-          </button>
+          </ConfigButton>
           <hr />
         </div>
         <h1>Detalhes do Cadastro</h1>
