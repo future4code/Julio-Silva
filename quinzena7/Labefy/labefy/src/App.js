@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Playlists from "./Components/PlayLists";
+import PlaylistUsuario from "./Components/PlaylistUsuario";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  state = {
+    telaAtual: "minhaplaylist",
+  };
+
+  selecionaTela = () => {
+    switch (this.state.telaAtual) {
+      case "playlist":
+        return <Playlists paginaMinhaPlaylist={this.paginaMinhaPlaylist} />;
+      case "minhaplaylist":
+        return <PlaylistUsuario paginaPlaylists={this.paginaPlaylists} />;
+      default:
+        return <div>erro</div>;
+    }
+  };
+
+  paginaPlaylists = () => {
+    this.setState({ telaAtual: "playlist" });
+  };
+  paginaMinhaPlaylist = () => {
+    this.setState({ telaAtual: "minhaplaylist" });
+  };
+
+  render() {
+    return <>{this.selecionaTela()}</>;
+  }
 }
-
-export default App;
