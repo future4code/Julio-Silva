@@ -1,29 +1,34 @@
 import React from "react";
+import Header from "./components/HeaderPage";
+import styled from "styled-components";
+import CriarPlaylist from "./components/CriarPlaylist";
+import EditarPlaylist from "./components/EditarPlaylist";
 
-import Playlists from "./pages/PaginaPlaylist/Playlists";
-import DetalhesPlaylist from "./pages/PaginaDetalhes/DetalhesPlaylist";
+const AppContainer = styled.div`
+  width: 100vw;
+`;
 
 export default class App extends React.Component {
   state = {
-    pagina: "playlist",
+    alterarPaginas: "criarPlalyst",
   };
 
-  selecionaPagina = () => {
-    switch (this.state.pagina) {
-      case "playlist":
-        return <Playlists />;
-      case "Detalhes":
-        return <DetalhesPlaylist />;
-      default:
-        return <Playlists />;
-    }
+  changePagina = (alterarPaginas) => {
+    this.setState({ alterarPaginas: alterarPaginas });
   };
-
-  
-
   render() {
-    return <>{this.selecionaPagina()}
-      
-    </>;
+    const alterarPaginas = () => {
+      if (this.state.alterarPaginas === "criarPlalyst") {
+        return <CriarPlaylist />;
+      } else if (this.state.alterarPaginas === "editarPlaylist") {
+        return <EditarPlaylist />;
+      }
+    };
+    return (
+      <AppContainer>
+        <Header changePagina={this.changePagina} />
+        {alterarPaginas()}
+      </AppContainer>
+    );
   }
 }
