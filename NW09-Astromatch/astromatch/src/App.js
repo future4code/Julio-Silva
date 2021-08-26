@@ -1,12 +1,12 @@
-import React from 'react'
-
-import PaginaInicial from './pages/PaginaInicial/PaginaInicial';
+import React from "react";
+import PaginaInicial from "./pages/PaginaInicial/PaginaInicial";
 
 function App() {
+
+  
   return (
     <div>
-      <PaginaInicial/>
-     <h1>Olá Mundo</h1>
+      <PaginaInicial />
     </div>
   );
 }

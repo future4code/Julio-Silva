@@ -7,7 +7,7 @@ import {
   ButtonsMatch,
 } from "./Paginainicial";
 
-function PaginaInicial() {
+function PaginaInicial(props) {
   return (
     <>
       <CardPaginaInicial>
