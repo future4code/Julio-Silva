@@ -5,7 +5,7 @@ import MatchListItem from "./MatchListItem/MatchListItem";
 import { ListContainer } from "./StyleMacthListPage";
 
 export default function MacthListPage() {
-  const [matches, setmatches] = useState([])
+  const [matches, setmatches] = useState([]);
 
   useEffect(() => {
     axios
@@ -13,8 +13,8 @@ export default function MacthListPage() {
       .then((res) => {
         setmatches(res.data.matches);
       })
-      .catch((e) => {
-        console.log(e);
+      .catch(() => {
+        alert("Ops, Algo deu errado");
       });
   }, []);
 

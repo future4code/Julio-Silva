@@ -4,6 +4,8 @@ import { URLProfileChoose } from "../../../constants/GET ProfileToChoose/URLProf
 import { URLChoosePerson } from "../../../constants/POSTChoosePerson/URLPostChoosePerson";
 import ChooseProfileButtons from "../ChooseProfileButtons/ChooseProfileButtons";
 import ChooseProfileCard from "../ChooseProfileCard/ChooseProfileCard";
+import { CircularProgress } from "@material-ui/core";
+import { ContainerLoad } from "./Style.CjooseProfilePage";
 
 export default function ChooseProfilePage(props) {
   const [profileToChoose, setprofileToChoose] = useState({ undefined });
@@ -17,6 +19,7 @@ export default function ChooseProfilePage(props) {
       .catch((e) => {
         console.log(e);
       });
+    setprofileToChoose(undefined);
   };
 
   const chooseProfile = (choice) => {
@@ -24,9 +27,8 @@ export default function ChooseProfilePage(props) {
       choice: choice,
       id: profileToChoose.id,
     };
-    // setprofileToChoose(undefined);
 
-    axios.post(URLChoosePerson, body).then((res) => {
+    axios.post(URLChoosePerson, body).then(() => {
       getProfileChoose();
     });
   };
@@ -54,7 +56,9 @@ export default function ChooseProfilePage(props) {
           />
         </>
       ) : (
-        <p>Carregando...</p>
+        <ContainerLoad>
+          <CircularProgress color="secondary" />
+        </ContainerLoad>
       )}
     </div>
   );

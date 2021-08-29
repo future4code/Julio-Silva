@@ -10,6 +10,7 @@ export const ChooseProfileContainer = styled.div`
   }
 
   p {
+    font-weight: bold;
     padding: 10px;
   }
 `;

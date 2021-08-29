@@ -1,13 +1,12 @@
-import React from 'react'
-import MainCard from './Components/MainCard/MainCard';
-import ResetButton from './Components/ResetButton/ResetButton';
+import React from "react";
+import MainCard from "./Components/MainCard/MainCard";
+import ResetButton from "./Components/ResetButton/ResetButton";
 
 function App() {
   return (
     <div>
-     <MainCard/>
-     <ResetButton/>
-     
+      <MainCard />
+      <ResetButton />
     </div>
   );
 }
