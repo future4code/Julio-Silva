@@ -1,11 +1,11 @@
 import React from "react";
-import { ChooseButtonConatiner } from "./ChooseButtonsStyle"; 
+import { ChooseButtonConatiner } from "./ChooseButtonsStyle";
 
-export default function ChooseProfileButtons() {
+export default function ChooseProfileButtons(props) {
   return (
     <ChooseButtonConatiner>
-      <button>Curtir</button>
-      <button>Descurtit</button>
+      <button onClick={props.onClickPositive}>Curtir</button>
+      <button onClick={props.onClickNegative}>Descurtit</button>
     </ChooseButtonConatiner>
   );
 }
