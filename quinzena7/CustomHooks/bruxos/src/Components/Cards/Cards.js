@@ -3,12 +3,21 @@ import useRequestData from "../../HooksCustom/useRequestData";
 import { BaseURL } from "./../../constants/BaseURL";
 
 export default function Cards() {
-  const bruxos = useRequestData(BaseURL);
+  const [data, isLoading, error] = useRequestData(BaseURL);
 
   const listaDeBruxos =
-    bruxos &&
-    bruxos.map((bruxo, index) => {
+    data &&
+    data.map((bruxo, index) => {
       return <li key={index}>{bruxo.name}</li>;
     });
-  return <div>{listaDeBruxos}</div>;
+  return (
+    <>
+      <h1>Lista de Bruxos de Harry Potter</h1>
+      {!isLoading && <p>Carregando...</p>}
+      {!isLoading && error && <p>Ocorreu um erro!</p>}
+      {!isLoading && data && data.length > 0 && data}
+      {!isLoading && data && data.length === 0 && <p>Não há dados</p>}
+      {listaDeBruxos}
+    </>
+  );
 }

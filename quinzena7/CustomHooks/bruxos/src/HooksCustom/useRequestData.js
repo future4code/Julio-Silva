@@ -3,17 +3,21 @@ import { useEffect, useState } from "react";
 
 export default function useRequestData(url) {
   const [data, setdata] = useState(undefined);
+  const [isLoading, setisLoading] = useState(false);
+  const [error, seterror] = useState("");
 
   useEffect(() => {
     axios
       .get(url)
       .then((res) => {
-          setdata(res.data)
-        console.log(res);
+        setisLoading(true);
+        setdata(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        setisLoading(false);
+        seterror(err);
+        alert("Desculpe, algo deu errado!");
       });
   }, [url]);
-  return data;
+  return [data, isLoading, error];
 }
