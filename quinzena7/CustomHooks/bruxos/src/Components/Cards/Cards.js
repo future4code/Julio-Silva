@@ -7,8 +7,8 @@ export default function Cards() {
 
   const listaDeBruxos =
     bruxos &&
-    bruxos.map((bruxo) => {
-      return <li>{bruxo.name}</li>;
+    bruxos.map((bruxo, index) => {
+      return <li key={index}>{bruxo.name}</li>;
     });
   return <div>{listaDeBruxos}</div>;
 }
