@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React from "react";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <div>
-      <h1>olá Mundo !</h1>
+      <Home />
     </div>
   );
 }
