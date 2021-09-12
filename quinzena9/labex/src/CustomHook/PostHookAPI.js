@@ -1,17 +1,18 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export const FetchHookAPI = (url) => {
-  const [data, setdata] = useState(undefined);
+export const PostHookAPI = (url) => {
+  const [apply, setapply] = useState(undefined);
   const [isLoading, setisLoading] = useState(false);
   const [error, seterror] = useState("");
 
   useEffect(() => {
     axios
-      .get(url)
+      .post(url)
       .then((res) => {
         setisLoading(true);
-        setdata(res.data.trips);       
+        setapply(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         setisLoading(false);
@@ -19,5 +20,5 @@ export const FetchHookAPI = (url) => {
         alert("Desculpe, algo deu errado!");
       });
   }, [url]);
-  return [data, isLoading, error];
+  return [apply, isLoading, error];
 };
