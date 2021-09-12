@@ -21,7 +21,7 @@ export default function AplicationForm(props) {
       "Content-Type": "application/json",
     },
   };
-
+      // falta pegar o ID do usuário e passar na URL
   const applyFroTrip = () => {
     axios
       .post(

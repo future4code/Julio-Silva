@@ -1,15 +1,14 @@
 import React from "react";
+import { FormToTrip } from "./styleFormToTrip";
 
 export default function FromToTrip(props) {
+    
   return (
-    <div>
+    <FormToTrip>
       <input type="text" placeholder={"Nome"} />
       <input type="text" placeholder={"profissão"} />
-      <label>Nascimento:</label>
       <input type="date" id="birth" />
 
-      <label>Idade:</label>
-      <input type="text" />
       <select name="estado">
         <option value="estado">Selecione o Estado</option>
         <option value="ac">Acre</option>
@@ -46,6 +45,6 @@ export default function FromToTrip(props) {
         placeholder={"Descreva o porque devemos te escolher"}
       />
       <input type="submit" onClick={props.applyFroTrip} />
-    </div>
+    </FormToTrip>
   );
 }
