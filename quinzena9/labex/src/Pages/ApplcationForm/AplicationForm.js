@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import FromToTrip from "../../Components/FormToTrip/FromToTrip";
+import { headers } from "../../Constants/Header";
 
 export default function AplicationForm(props) {
   const [apply, setapply] = useState({});
@@ -16,12 +17,6 @@ export default function AplicationForm(props) {
     country: "zelândia",
   };
 
-  const headers = {
-    HEADERS: {
-      "Content-Type": "application/json",
-    },
-  };
-      // falta pegar o ID do usuário e passar na URL
   const applyFroTrip = () => {
     axios
       .post(
@@ -30,8 +25,8 @@ export default function AplicationForm(props) {
         headers
       )
       .then((res) => {
-        console.log(res.data.message);
-        setapply(res.data.message);
+        const apply = res.data.message;
+        setapply(apply);
         alert("Inscrição realizada com sucesso!");
       })
       .catch((e) => {
@@ -41,7 +36,7 @@ export default function AplicationForm(props) {
 
   return (
     <div>
-      <FromToTrip applyFroTrip={applyFroTrip}/>
+      <FromToTrip applyFroTrip={applyFroTrip} />
 
       {/* {!isLoading && <p>Carregando...</p>}
       {!isLoading && error && <p>Ocorreu um erro!</p>}

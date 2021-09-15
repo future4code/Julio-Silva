@@ -5,6 +5,7 @@ export default function FromToTrip(props) {
     
   return (
     <FormToTrip>
+      <h1>Formulário de inscrção</h1>
       <input type="text" placeholder={"Nome"} />
       <input type="text" placeholder={"profissão"} />
       <input type="date" id="birth" />

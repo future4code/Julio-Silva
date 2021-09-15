@@ -9,9 +9,13 @@ export default function Home() {
     history.push("/listTrip");
   };
 
+  const goToLogin =() =>{
+    history.push("/login")
+  }
+
   return (
     <div>
-      <ButtonsHome goToListTrip={goToListTrip} />
+        <ButtonsHome goToListTrip={goToListTrip} goToLogin={goToLogin}/>
     </div>
   );
 }

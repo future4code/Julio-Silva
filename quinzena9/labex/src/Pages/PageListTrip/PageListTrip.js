@@ -7,7 +7,6 @@ import { FetchHookAPI } from "../../CustomHook/FetchHookAPI";
 export default function PageListTrip() {
   const history = useHistory();
   const [trip, isLoading, error] = FetchHookAPI(BaseUrlGetTrips);
-  
 
   const goBack = () => {
     history.goBack();
@@ -17,8 +16,8 @@ export default function PageListTrip() {
     <>
       <h1>Lista De Viagens</h1>
       {trip &&
-        trip.map((trip, id) => {
-          return <TripCard trip={trip}/>
+        trip.map((trip) => {
+          return <TripCard trip={trip} />;
         })}
       {!isLoading && <p>Carregando...</p>}
       {!isLoading && error && <p>Ocorreu um erro!</p>}

@@ -16,7 +16,7 @@ export default function TripCard(props) {
       <p>{trip.description}</p>
       <p>{trip.date}</p>
       <p>{trip.durationInDays} - dias</p>
-      <button tripID={trip.id} onClick={goToFormTrip}>Quero Embarcar</button>
+      <button tripid={trip.id} onClick={goToFormTrip}>Quero Embarcar</button>
     </>
   );
 }

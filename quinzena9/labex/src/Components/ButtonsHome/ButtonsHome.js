@@ -6,7 +6,7 @@ export default function ButtonsHome(props) {
       <button onClick={props.goToListTrip}>
         <strong >Lista de Viagens</strong>
       </button>
-      <button>
+      <button onClick={props.goToLogin}>
         <strong>Area Restrita</strong>
       </button>
     </div>
