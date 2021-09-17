@@ -1,58 +1,55 @@
 import axios from "axios";
-import { useState } from "react";
+
 import { useHistory } from "react-router-dom";
-import { BaseUrlLogin } from "./../../Constants/BaseURL";
+import { headers } from "../../Constants/Header";
+import useForm from "../../CustomHook/useForm";
 
 export const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   const history = useHistory();
 
-  const onChangeEmail = (event) => {
-    setEmail(event.target.value);
-  };
+  const { form, onChange, cleanFields } = useForm({
+    email: "",
+    password: "",
+  });
 
-  const onChangePassword = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const onSubmitLogin = () => {
-    const body = {
-      email: email,
-      password: password,
-    };
-
+  const LoginAdmin = (e) => {
+    e.preventDefault();
     axios
-      .post(BaseUrlLogin, body)
-      .then((response) => {
-        localStorage.setItem("token", response.data.token);
+      .post(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login",
+        form,
+        headers
+      )
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
         history.push("/admin");
-        setEmail("");
-        setPassword("");
+        console.log("deu certo ");
+        cleanFields();
       })
       .catch(() => {
-        setEmail("");
-        setPassword("");
-        alert("Usuário ou senha incorreto");
+        alert("Ops, algo deu errado!");
       });
   };
 
   return (
     <div>
-      <input
-        placeholder="email"
-        type="email"
-        value={email}
-        onChange={onChangeEmail}
-      />
-      <input
-        placeholder="password"
-        type="password"
-        value={password}
-        onChange={onChangePassword}
-      />
-      <button onClick={onSubmitLogin}>Enviar</button>
+      <form onSubmit={LoginAdmin}>
+        <input
+          placeholder="email"
+          type="email"
+          value={form.email}
+          name={"email"}
+          onChange={onChange}
+        />
+        <input
+          placeholder="password"
+          type="password"
+          value={form.password}
+          name={"password"}
+          onChange={onChange}
+        />
+        <button>Enviar</button>
+      </form>
     </div>
   );
 };

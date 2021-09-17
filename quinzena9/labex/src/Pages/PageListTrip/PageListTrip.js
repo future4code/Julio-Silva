@@ -16,8 +16,8 @@ export default function PageListTrip() {
     <>
       <h1>Lista De Viagens</h1>
       {trip &&
-        trip.map((trip) => {
-          return <TripCard trip={trip} />;
+        trip.map((trip, id) => {
+          return <TripCard key={id }trip={trip} />;
         })}
       {!isLoading && <p>Carregando...</p>}
       {!isLoading && error && <p>Ocorreu um erro!</p>}

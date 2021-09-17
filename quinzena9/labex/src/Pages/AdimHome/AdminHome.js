@@ -1,37 +1,30 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { BaseURLTripDetail } from "../../Constants/BaseURL";
-
-export const useProtetionPage = () => {
-  const history = useHistory();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token === null) {
-      history.push("/login");
-    }
-  });
-};
+import { useProtetionPage } from "../../CustomHook/useProtetionPage";
 
 export const AdminHome = () => {
-  const newPage = useHistory();
   useProtetionPage();
+  const newPage = useHistory();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get(BaseURLTripDetail, {
-        headers: {
-          auth: token,
-        },
-      })
-      .then(() => {
+      .get(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trip/:id",
+        {
+          headers: {
+            auth: token,
+          },
+        }
+      )
+      .then((res) => {
         newPage.push("/admin");
+        console.log(res);
+        const trips = res.data.trip;
       })
       .catch(() => {
-        console.log("usuário não logado");
+        newPage.push("/login");
       });
   });
 
