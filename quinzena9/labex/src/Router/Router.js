@@ -26,7 +26,7 @@ export default function Router() {
         <Route exact path={"/admin"}>
           <AdminHome />
         </Route>
-        <Route exact path={"/tripdetail"}>
+        <Route exact path={"/tripdetail/:id"}>
         </Route>
           <TripDetails />
       </Switch>

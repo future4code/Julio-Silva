@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import { useProtetionPage } from "../../CustomHook/useProtetionPage";
 
 export const AdminHome = () => {
+  const [data, setdata] = useState([])
   useProtetionPage();
   const newPage = useHistory();
 
@@ -11,7 +12,7 @@ export const AdminHome = () => {
     const token = localStorage.getItem("token");
     axios
       .get(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trip/:id",
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/julio-sila/trip/:id",
         {
           headers: {
             auth: token,
@@ -20,17 +21,21 @@ export const AdminHome = () => {
       )
       .then((res) => {
         newPage.push("/admin");
-        console.log(res);
-        const trips = res.data.trip;
+        console.log(res.data);
+        setdata(res.data)
       })
       .catch(() => {
         newPage.push("/login");
       });
-  });
+  },[]);
+
+  
 
   return (
     <div>
       <h1>Página do ADM</h1>
+      {data.candidates}
+      
     </div>
   );
 };

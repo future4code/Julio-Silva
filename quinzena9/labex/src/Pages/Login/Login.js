@@ -27,7 +27,7 @@ export const Login = () => {
         cleanFields();
       })
       .catch(() => {
-        alert("Ops, algo deu errado!");
+       console.log('Deu errado')
       });
   };
 
@@ -40,6 +40,7 @@ export const Login = () => {
           value={form.email}
           name={"email"}
           onChange={onChange}
+          required
         />
         <input
           placeholder="password"
@@ -47,6 +48,7 @@ export const Login = () => {
           value={form.password}
           name={"password"}
           onChange={onChange}
+          required
         />
         <button>Enviar</button>
       </form>
