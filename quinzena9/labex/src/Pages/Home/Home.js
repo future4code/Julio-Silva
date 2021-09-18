@@ -6,7 +6,7 @@ export default function Home() {
   const history = useHistory();
 
   const goToListTrip = () => {
-    history.push("/listTrip");
+    history.push("/trips/list");
   };
 
   const goToLogin =() =>{

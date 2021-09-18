@@ -6,6 +6,7 @@ import AplicationForm from "../Pages/ApplcationForm/AplicationForm";
 import { Login } from "../Pages/Login/Login";
 import TripDetails from "../Pages/TripDetails/TripDetails";
 import { AdminHome } from "../Pages/AdimHome/AdminHome";
+import CreateTrip from "../Pages/CreateTrip/CreateTrip";
 
 export default function Router() {
   return (
@@ -14,21 +15,24 @@ export default function Router() {
         <Route exact path={"/"}>
           <Home />
         </Route>
-        <Route exact path={"/listTrip"}>
+        <Route exact path={"/trips/list"}>
           <PageListTrip />
         </Route>
-        <Route exact path={"/formtrip"}>
+        <Route exact path={"/trips/application"}>
           <AplicationForm />
         </Route>
         <Route exact path={"/login"}>
           <Login />
         </Route>
-        <Route exact path={"/admin"}>
+        <Route exact path={"/admin/trips/list"}>
           <AdminHome />
         </Route>
-        <Route exact path={"/tripdetail/:id"}>
+        <Route exact path={"/admin/trips/create"}>
+          <CreateTrip />
         </Route>
+        <Route exact path={"/tripdetail/:id"}>
           <TripDetails />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

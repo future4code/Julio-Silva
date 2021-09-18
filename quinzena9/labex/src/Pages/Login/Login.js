@@ -16,14 +16,13 @@ export const Login = () => {
     e.preventDefault();
     axios
       .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login",
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/julio-silva/login",
         form,
         headers
       )
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        history.push("/admin");
-        console.log("deu certo ");
+        history.push("/admin/trips/list");        
         cleanFields();
       })
       .catch(() => {

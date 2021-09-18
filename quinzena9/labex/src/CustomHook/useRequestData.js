@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export const FetchHookAPI = (url) => {
+export const useRequestData = (url) => {
   const [data, setdata] = useState(undefined);
   const [isLoading, setisLoading] = useState(false);
   const [error, seterror] = useState("");

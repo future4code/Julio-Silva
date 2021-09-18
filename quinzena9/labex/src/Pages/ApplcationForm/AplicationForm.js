@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { PostHookAPI } from "../../CustomHook/PostHookAPI";
+
 
 import useForm from "../../CustomHook/useForm";
 
@@ -16,22 +16,24 @@ function AplicationForm() {
   });
 
   const apllyToTrip = (e) => {
+    const id = Math.random;
     e.preventDefault();
     axios
       .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/julio-silva/trips/:id/apply",
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/julio-silva/trips/${id}/apply`,
         form
       )
-      .then(() => {
+      .then((res) => {
         alert("Formulário enviado com sucesso!");
-        history.push("/listTrip");
+        history.push("/trips/list");
         cleanFields();
+        console.log(res);
       })
       .catch((e) => {
         console.log(e);
       });
   };
-
+  console.log(form);
   return (
     <div>
       <h1>Formulário de inscrção</h1>
@@ -103,7 +105,7 @@ function AplicationForm() {
           onChange={onChange}
           required
         />
-        <button >Enviar Formulário</button>
+        <button>Enviar Formulário</button>
       </form>
     </div>
   );
